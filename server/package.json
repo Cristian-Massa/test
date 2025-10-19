@@ -1,0 +1,40 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/src/main.js",
+  "scripts": {
+    "build": "tsc && tsc-alias",
+    "watch": "tsc --watch",
+    "start": "npm run build && node ./dist/src/main.js",
+    "start:dev": "tsc-watch --onSuccess \"sh -c 'tsc-alias && node dist/src/main.js'\"",
+    "orm:generate": "drizzle-kit generate",
+    "orm:migrate": "drizzle-kit migrate",
+    "orm:migrate:up": "drizzle-kit migrate up",
+    "orm:migrate:down": "drizzle-kit migrate down",
+    "orm:migrate:reset": "drizzle-kit migrate reset",
+    "orm:migrate:status": "drizzle-kit migrate status",
+    "orm:migrate:rollback": "drizzle-kit migrate rollback",
+    "orm:migrate:rollback:all": "drizzle-kit migrate rollback --all",
+    "orm:migrate:rollback:all:force": "drizzle-kit migrate rollback --all --force"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.8.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "drizzle-kit": "^0.31.5",
+    "drizzle-orm": "^0.44.6",
+    "express": "^5.1.0",
+    "express-validator": "^7.2.1",
+    "pg": "^8.16.3",
+    "tsc-alias": "^1.8.16",
+    "tsc-watch": "^4.6.2",
+    "typescript": "^5.9.3"
+  }
+}

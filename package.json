@@ -1,0 +1,17 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "init:windows": "bash ./scripts/start.sh",
+    "init:unix": "./scripts/start.sh",
+    "view:server-logs": "docker logs -f app_server",
+    "view:client-logs": "docker logs -f app_client",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
